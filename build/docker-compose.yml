@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    wetty:
+        build: ../wetty/.
+        image: wetty 
+    cb:
+        build: ../cb/.
+        image: callback 
+           
