@@ -3,8 +3,43 @@ version: '3'
 services:
     wetty:
         build: ../wetty/.
-        image: wetty 
+        image: wetty
+        hostname: wetty 
+        ports:
+            - "3000:3000"
+        networks:
+            - default
+    
+    box0:
+        build: ../box0/.
+        image: box0
+        hostname: box0 
+        networks:
+            - default
+            - net_1
+    box1:
+        build: ../box1/.
+        image: box1
+        hostname: box1 
+        networks:
+            - net_1
+            - net_2  
+    box2:
+        build: ../box2/.
+        image: box2
+        hostname: box2
+        networks:
+            - net_2
+            - net_3  
     cb:
         build: ../cb/.
-        image: callback 
-           
+        image: callback
+        hostname: cb 
+        networks:
+            - net_3
+
+networks:
+    default:
+    net_1:
+    net_2:
+    net_3:  

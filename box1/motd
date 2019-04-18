@@ -1,0 +1,7 @@
+Oh Hi!  Welcome to the first challenge, do you have what it takes?
+
+Only port 22 is available from the outside so you must set up an ssh tunnel to the listener.
+
+Write a python script to connect to your local port and complete the challenge.
+
+Complete the challenge to connect to bob@box2 using the flag as the password. 

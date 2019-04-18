@@ -1,2 +1,16 @@
 # ssh_tunnels
-Practice for ssh Tunnels, uses dockers and docker compose
+The user must be fluent in python and ssh tunnels to win.
+
+Build using docker compose.  
+```
+cd build 
+docker-compose up
+```
+Then in your browser of your choice navigate to 
+
+http://localhost:3000 and try logging in as user:start
+
+After that you should be able to open more windows with
+```
+http://localhost:3000/wetty/ssh/user?sshpass=start
+```
