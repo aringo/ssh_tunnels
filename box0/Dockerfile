@@ -1,9 +1,8 @@
 FROM alpine
 
 RUN mkdir /run/sshd && apk add --no-cache --update openssh-server openssh py3-pip vim
-RUN rm /usr/bin/nc
-
 COPY motd /etc/motd
+RUN rm /usr/bin/nc && chmod a+r /etc/motd
 
 # setup ssh keys partially and change the config to allow port forwarding 
 RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa && ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa

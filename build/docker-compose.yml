@@ -41,5 +41,23 @@ services:
 networks:
     default:
     net_1:
+        ipam:
+            driver: default
+            config:
+                - subnet: "192.0.0.0/24"
     net_2:
+        ipam:
+            driver: default
+            config:
+                - subnet: "192.0.2.0/24"
     net_3:  
+        ipam:
+            driver: default
+            config:
+                - subnet: "203.0.113.0/24"
+
+
+
+
+
+
