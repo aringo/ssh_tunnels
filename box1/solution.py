@@ -8,7 +8,7 @@ directions = sock.recv(BUFSIZE)
 while True:
     prob = sock.recv(BUFSIZE)
     if not any(x in '+-/*' for x in prob.decode()):
-        print(prob)
+        print(prob.decode('utf-8'))
         break
     sock.send(f"{round(eval(prob.decode().strip()), 2)}\n".encode())
 

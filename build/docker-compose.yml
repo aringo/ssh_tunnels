@@ -8,53 +8,44 @@ services:
         ports:
             - "3000:3000"
         networks:
-            - default
-    
+            ssh_network:
+                ipv4_address: 192.0.2.2  
     box0:
         build: ../box0/.
         image: box0
         hostname: box0 
         networks:
-            - default
-            - net_1
+            ssh_network:
+                ipv4_address: 192.0.2.3
     box1:
         build: ../box1/.
         image: box1
         hostname: box1 
         networks:
-            - net_1
-            - net_2  
+            ssh_network:
+                ipv4_address: 192.0.2.4
     box2:
         build: ../box2/.
         image: box2
         hostname: box2
         networks:
-            - net_2
-            - net_3  
+            ssh_network:
+                ipv4_address: 192.0.2.5
     cb:
         build: ../cb/.
         image: callback
         hostname: cb 
         networks:
-            - net_3
+            ssh_network:
+                ipv4_address: 192.0.2.6
 
 networks:
-    default:
-    net_1:
-        ipam:
-            driver: default
-            config:
-                - subnet: "192.0.0.0/24"
-    net_2:
+    ssh_network:
         ipam:
             driver: default
             config:
                 - subnet: "192.0.2.0/24"
-    net_3:  
-        ipam:
-            driver: default
-            config:
-                - subnet: "203.0.113.0/24"
+
 
 
 
