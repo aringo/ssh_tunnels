@@ -1,6 +1,10 @@
 # ssh_tunnels
 The user must be fluent in python and ssh tunnels to win.
 
+After setup the user should have a network similar to below.
+
+![Network Diagram](https://github.com/aringo/ssh_python_tunnels/raw/4061f3e0b2241786f697b7df7754745915375018/Setup.jpg "Network Diagram")
+
 ### Setup
 Clone project and build using docker compose.
 
