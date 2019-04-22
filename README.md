@@ -1,4 +1,4 @@
-# ssh_tunnels
+# ssh_python_tunnels
 The user must be fluent in python and ssh tunnels to win.
 
 After setup the user should have a network similar to below.
