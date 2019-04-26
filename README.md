@@ -13,7 +13,7 @@ git clone https://github.com/aringo/ssh_python_tunnels.git
 cd ssh_python_tunnels/build    
 docker-compose up
 ```
-Then in your browser of your choice navigate to 
+Then in your browser of choice navigate to 
 
 http://localhost:3000 and try logging in as user:start
 
